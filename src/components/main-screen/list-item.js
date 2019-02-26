@@ -14,7 +14,7 @@ import * as Animatable from 'react-native-animatable';
 
 import Title from './Title';
 import ClientImage from './ClientImage';
-import NextEpisode from './NextEpisode';
+import VisitCard from './VisitCard';
 
 const height = Dimensions.get('window').height;
 
@@ -28,7 +28,7 @@ const colors = [
   '#34495E',
   '#F1C40F',
   '#E74C3C',
-  '#95A5A6',
+  '#ff0055',
   '#607d8b',
   '#9c27b0',
   '#00bcd4',
@@ -38,15 +38,17 @@ const colors = [
 const getStyles = (opened, left) => StyleSheet.create({
   container: selectOpened(opened, {
     opened: {
-      height,
+      height: height,
       width: Dimensions.get('window').width,
       position: 'relative',
       zIndex: 1,
     },
     closed: {
       flex: 1,
+      paddingLeft: 5,
+      paddingRight: 5,
       alignItems: 'stretch',
-      height: 250,
+      height: 300,
       justifyContent: 'center',
     },
   }),
@@ -58,7 +60,6 @@ const getStyles = (opened, left) => StyleSheet.create({
     closed: {
       position: 'absolute',
       top: 25,
-
       zIndex: 2,
       height: 200,
       width: 200,
@@ -72,7 +73,7 @@ const getStyles = (opened, left) => StyleSheet.create({
     },
     closed: {
       flex: 0,
-      height: 170,
+      height: 220,
       zIndex: 1,
     },
   }),
@@ -92,7 +93,9 @@ const getStyles = (opened, left) => StyleSheet.create({
   }),
   descriptionText: {
     color: 'black',
-    textAlign: 'center',
+    textAlign: 'left',
+    fontSize: 24,
+    fontFamily: 'Space Mono',
     maxHeight: height / 3,
   },
   animatableNextEpisode: {
@@ -158,19 +161,20 @@ class ListItem extends Component {
               color={colors[(props.index % colors.length)]}
               onPress={this.onPress}
               noShadow={opened}
+              opened={opened}
             />
-            { (opened || ! exitEnded) && (
+            { (opened) && (
               <Animatable.View
                 animation="slideInLeft"
                 style={styles.animatableNextEpisode}
                 duration={800}
                 ref="nextEpisode"
               >
-                <NextEpisode tvShow={this.props.tvShow}/>
+                <VisitCard client={this.props.client}/>
               </Animatable.View>
             )}
           </View>
-          { (opened || ! exitEnded) && (
+          { (opened) && (
             <Animatable.View
               animation="fadeInUpBig"
               style={styles.description}

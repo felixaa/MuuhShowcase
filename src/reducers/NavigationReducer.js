@@ -5,10 +5,18 @@ export type State = {
 };
 
 const initialState = {
-  initialRoute: null
+  initialRoute: null,
+  statusBar: true
 };
 
 function navigation(state = initialState, action) {
+
+  if (action.type == 'TOGGLE_STATUS_BAR') {
+    return {
+      ...state,
+      statusBar: action.hidden
+    }
+  }
 
   return state;
 }

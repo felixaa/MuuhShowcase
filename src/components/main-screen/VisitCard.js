@@ -2,23 +2,7 @@ import React, { PropTypes } from 'react';
 import { View, Text, StyleSheet, Image, TouchableHighlight, TouchableWithoutFeedback } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
-const styles = StyleSheet.create({
-  touchable: {
-    flex: 1,
-  },
-  square: {
-    flex: 1,
-    justifyContent: 'center',
-    padding: 30,
-  },
-  text: {
-    color: 'cyan',
-    fontSize: 24,
-    maxWidth: 140,
-  },
-});
-
-const NextEpisode = props => (
+const VisitCard = props => (
   <TouchableHighlight onPress={props.onPress} underlayColor="white" style={[
     styles.touchable,
     props.style,
@@ -31,14 +15,30 @@ const NextEpisode = props => (
   </TouchableHighlight>
 );
 
-NextEpisode.propTypes = {
+const styles = StyleSheet.create({
+  touchable: {
+    flex: 1,
+  },
+  square: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 30,
+  },
+  text: {
+    fontFamily: 'Space Mono',
+    fontSize: 24,
+    maxWidth: 140,
+  },
+});
+
+VisitCard.propTypes = {
   client: PropTypes.object,
   style: PropTypes.any,
   color: PropTypes.string,
 };
 
-NextEpisode.defaultProps = {
+VisitCard.defaultProps = {
   color: 'white',
 };
 
-export default NextEpisode;
+export default VisitCard;

@@ -8,6 +8,14 @@ import {
 const DATA = require('../../data/data');
 import ListItem from './list-item';
 import * as Animatable from 'react-native-animatable';
+const AnimatableListView = Animatable.createAnimatableComponent(ListView);
+import { connect } from 'react-redux'
+
+import {
+  toggleStatusBar
+} from '../../actions'
+
+import Muuh from '../../commons/muuhLogo'
 
 class HomeScreen extends Component {
   constructor(props) {
@@ -28,11 +36,13 @@ class HomeScreen extends Component {
   toggleActive(rowID) {
     if (this.state.active) {
       this.animate(false, this.state.currentId);
+      this.props.dispatch(toggleStatusBar(false))
       return this.setState({ active: false });
     }
 
     this.setState({ currentId: rowID, active: true });
     this.animate(true, rowID);
+    this.props.dispatch(toggleStatusBar(true))
   }
 
   animate(out, currentId) {
@@ -54,8 +64,12 @@ class HomeScreen extends Component {
     const { active } = this.state;
     return (
       <View style={styles.container}>
-        <ListView
+        <AnimatableListView
+          animation="fadeInUp"
+          duration={1500}
+          delay={400}
           ref="list"
+          renderHeader={() => this.renderHeader()}
           dataSource={this.state.dataSource.cloneWithRows(DATA.clients)}
           scrollEnabled={!active}
           renderRow={(client, sectionID, rowID) => (
@@ -69,14 +83,38 @@ class HomeScreen extends Component {
     );
   }
 
+  renderHeader() {
+    return(
+      <Animatable.View
+        animation={"zoomInUp"}
+        duration={2000}
+        delay={1900}
+        style={styles.header}>
+        <Muuh/>
+      </Animatable.View>
+    );
+  }
+
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F1FFEA',
+    borderTopLeftRadius: 10,
+    borderTopRightRadius: 10,
+    backgroundColor: 'white',
     justifyContent: 'center'
+  },
+  header: {
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
 
-module.exports = HomeScreen
+function select(store) {
+  return {
+
+  }
+}
+
+module.exports = connect(select)(HomeScreen)

@@ -4,6 +4,7 @@ import {
   Text,
   ActivityIndicator,
   View,
+  StatusBar,
   Navigator,
 } from 'react-native';
 
@@ -31,6 +32,12 @@ class MuuhNavigator extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <StatusBar
+          animated={true}
+          //barStyle={'dark-content'}
+          showHideTransition={'slide'}
+          hidden={this.props.statusBar}
+        />
         <Navigator
           initialRoute={{name: 'home'}}
           renderScene={this.renderScene}
@@ -46,13 +53,13 @@ class MuuhNavigator extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   }
 });
 
 function select(store) {
   return {
-
+    statusBar: store.navigation.statusBar
   }
 }
 

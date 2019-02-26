@@ -8,12 +8,13 @@ const styles = StyleSheet.create({
   },
   square: {
     flex: 1,
-    opacity: 0.95,
     justifyContent: 'center',
-    padding: 30,
+    padding: 25,
   },
   text: {
     color: 'white',
+    fontFamily: 'Space Mono',
+    fontWeight: 'bold',
     fontSize: 24,
     maxWidth: 140,
   },
@@ -33,6 +34,7 @@ const Title = props => (
     <View style={[
       styles.square,
       { backgroundColor: props.color},
+      !props.opened ? {borderRadius: 15, opacity: 0.95} : null,
       props.noShadow ? null : styles.shadow
     ]}>
       <Text style={styles.text}>
@@ -48,6 +50,7 @@ Title.propTypes = {
   style: PropTypes.any,
   color: PropTypes.string,
   noShadow: PropTypes.bool,
+  opened: PropTypes.bool
 };
 
 Title.defaultProps = {

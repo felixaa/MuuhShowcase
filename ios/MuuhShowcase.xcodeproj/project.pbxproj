@@ -22,6 +22,11 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		241F661D1E436D8B00499D5A /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 241F66191E436D8B00499D5A /* SpaceMono-Bold.ttf */; };
+		241F661E1E436D8B00499D5A /* SpaceMono-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 241F661A1E436D8B00499D5A /* SpaceMono-BoldItalic.ttf */; };
+		241F661F1E436D8B00499D5A /* SpaceMono-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 241F661B1E436D8B00499D5A /* SpaceMono-Italic.ttf */; };
+		241F66201E436D8B00499D5A /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 241F661C1E436D8B00499D5A /* SpaceMono-Regular.ttf */; };
+		41C26AE454DC4223B1A356C9 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC34FEED498A4648BD5F4112 /* libRNSVG.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
@@ -89,6 +94,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
+		};
+		241F66481E4390D300499D5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 688F98361D7947AC8DB5B85C /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = RNSVG;
 		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -231,9 +243,15 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MuuhShowcase/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MuuhShowcase/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		241F66191E436D8B00499D5A /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceMono-Bold.ttf"; path = "../../../../Downloads/Space_Mono/SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
+		241F661A1E436D8B00499D5A /* SpaceMono-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceMono-BoldItalic.ttf"; path = "../../../../Downloads/Space_Mono/SpaceMono-BoldItalic.ttf"; sourceTree = "<group>"; };
+		241F661B1E436D8B00499D5A /* SpaceMono-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceMono-Italic.ttf"; path = "../../../../Downloads/Space_Mono/SpaceMono-Italic.ttf"; sourceTree = "<group>"; };
+		241F661C1E436D8B00499D5A /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SpaceMono-Regular.ttf"; path = "../../../../Downloads/Space_Mono/SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		688F98361D7947AC8DB5B85C /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		CC34FEED498A4648BD5F4112 /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +278,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				41C26AE454DC4223B1A356C9 /* libRNSVG.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +391,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		241F662C1E4390D300499D5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				241F66491E4390D300499D5A /* libRNSVG.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		247763E62065B8D3006980B0 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				CC34FEED498A4648BD5F4112 /* libRNSVG.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +439,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				688F98361D7947AC8DB5B85C /* RNSVG.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -420,10 +456,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				241F66191E436D8B00499D5A /* SpaceMono-Bold.ttf */,
+				241F661A1E436D8B00499D5A /* SpaceMono-BoldItalic.ttf */,
+				241F661B1E436D8B00499D5A /* SpaceMono-Italic.ttf */,
+				241F661C1E436D8B00499D5A /* SpaceMono-Regular.ttf */,
 				13B07FAE1A68108700A75B9A /* MuuhShowcase */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MuuhShowcaseTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				247763E62065B8D3006980B0 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -483,7 +524,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -552,6 +593,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 241F662C1E4390D300499D5A /* Products */;
+					ProjectRef = 688F98361D7947AC8DB5B85C /* RNSVG.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -616,6 +661,13 @@
 			fileType = archive.ar;
 			path = libReact.a;
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		241F66491E4390D300499D5A /* libRNSVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSVG.a;
+			remoteRef = 241F66481E4390D300499D5A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
@@ -752,7 +804,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				241F661E1E436D8B00499D5A /* SpaceMono-BoldItalic.ttf in Resources */,
+				241F661D1E436D8B00499D5A /* SpaceMono-Bold.ttf in Resources */,
+				241F661F1E436D8B00499D5A /* SpaceMono-Italic.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				241F66201E436D8B00499D5A /* SpaceMono-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -828,6 +884,10 @@
 				INFOPLIST_FILE = MuuhShowcaseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuuhShowcase.app/MuuhShowcase";
 			};
@@ -842,6 +902,10 @@
 				INFOPLIST_FILE = MuuhShowcaseTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuuhShowcase.app/MuuhShowcase";
 			};
@@ -861,7 +925,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = no.muuh.showcase;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.no.muuh.muuhshowcase;
 				PRODUCT_NAME = MuuhShowcase;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -880,7 +944,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = no.muuh.showcase;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.no.muuh.muuhshowcase;
 				PRODUCT_NAME = MuuhShowcase;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -972,7 +1036,7 @@
 				00E356F71AD99517003FC87E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MuuhShowcase" */ = {
 			isa = XCConfigurationList;
@@ -981,7 +1045,7 @@
 				13B07F951A680F5B00A75B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MuuhShowcase" */ = {
 			isa = XCConfigurationList;
@@ -990,7 +1054,7 @@
 				83CBBA211A601CBA00E9B192 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

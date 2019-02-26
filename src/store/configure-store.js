@@ -11,7 +11,7 @@ const enhancer = compose(
 
 function configureStore(onComplete: ?() => void) {
   const store = createStore(reducers, enhancer, autoRehydrate());
-  persistStore(store, onComplete).purge();
+  //persistStore(store, onComplete).purge();
   return store
 }
 

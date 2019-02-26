@@ -11,7 +11,7 @@ import MuuhNavigator from './MuuhNavigator'
 class VWKickoffApp extends Component{
   render() {
     return(
-      <View style={{flex: 1}}>
+      <View style={styles.rootContainer}>
         <MuuhNavigator/>
       </View>
     );
@@ -21,6 +21,10 @@ class VWKickoffApp extends Component{
 const styles = StyleSheet.create({
   activityIndicator: {
     flex: 1,
+  },
+  rootContainer: {
+    flex: 1,
+    backgroundColor: 'white'
   }
 });
 

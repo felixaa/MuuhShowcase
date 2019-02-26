@@ -1,10 +1,11 @@
 
-function something() {
+function toggleStatusBar(hidden) {
   return {
-    type: 'something'
+    type: 'TOGGLE_STATUS_BAR',
+    hidden: hidden
   }
 }
 
 module.exports = {
-  something
+  toggleStatusBar
 }

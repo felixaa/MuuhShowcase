@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     zIndex: 1,
-    resizeMode: 'cover',
+    //resizeMode: 'cover',
   },
   shadow: {
     shadowColor: 'black',
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
 const ClientImage = props => (
   <View style={[ styles.container, props.noShadow ? null : styles.shadow, props.style]}>
     <Image source={{uri: props.client.image}}
-           style={styles.image}
+           style={[styles.image, props.noShadow ? {borderTopLeftRadius: 10, borderTopRightRadius: 10} : null]}
       />
   </View>
 );
